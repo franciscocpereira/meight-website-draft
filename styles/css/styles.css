@@ -8,6 +8,8 @@
 body {
   background-color: transparent;
   font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -36,13 +38,39 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
 .p1 {
   font-size: 24px;
   line-height: 36px;
 }
 
+.p3 {
+  width: 90%;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.05px;
+  font-weight: 300;
+}
+
 .bodytext-color2 {
   color: #6155DE;
+}
+
+.bodytext-color3 {
+  color: #afa8db;
 }
 
 .container {
@@ -314,7 +342,8 @@ main section.hero #hero-subheadline {
 main section.section-1 {
   background-color: white;
   position: relative;
-  min-height: 80vh;
+  height: 85vh;
+  min-height: 700px;
   max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +374,8 @@ main section.section-1 .s1-img-2 {
 main section.section-2 {
   background-color: #F2E9F5;
   position: relative;
-  min-height: 80vh;
+  height: 85vh;
+  min-height: 700px;
   max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,16 +384,33 @@ main section.section-2 {
   background-size: cover;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+}
+main section.section-2 .container-grid {
+  grid-template-rows: auto 18%;
+}
+main section.section-2 .breadcrum-box {
+  align-self: flex-end;
+  align-items: center;
+  display: flex;
+  padding-left: 40px;
+}
+main section.section-2 .breadcrum-box .breadcrum {
+  font-family: "Faktum";
+  color: #1C0CCF;
+  padding-left: 20px;
+  font-size: 24px;
+  letter-spacing: -1px;
 }
 main section.section-2 [data-termynal] {
-  width: 480px;
+  width: 400px;
   max-width: 100%;
   background: #242424;
   color: #d4d4d4;
   font-size: 10px;
   font-family: "Fira Mono", Consolas, Menlo, Monaco, "Courier New", Courier, monospace;
   border-radius: 15px;
-  padding: 75px 45px 35px;
+  padding: 60px 40px 35px;
   position: relative;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -371,10 +418,36 @@ main section.section-2 [data-termynal] {
 main section.section-2 [data-ty] {
   line-height: 1.8;
 }
+main section.section-2 [data-ty=input]::before, main section.section-2 [data-ty-prompt]::before {
+  margin-right: 0.75em;
+  color: #D76D77;
+}
+main section.section-2 [data-termynal]:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9515d;
+  -webkit-box-shadow: 20px 0 0 #f4c025, 40px 0 0 #3ec930;
+  box-shadow: 20px 0 0 #f4c025, 40px 0 0 #3ec930;
+}
+main section.section-2 .s2-img-1 {
+  position: absolute;
+  left: 32%;
+  bottom: 12%;
+  height: 54%;
+  z-index: 99;
+  filter: drop-shadow(-20px 20px 40px rgba(13, 21, 130, 0.2));
+}
 main section.section-3 {
   background: linear-gradient(78.04deg, #1C0CCF 3.3%, #3805AE 59.54%, #4D0094 103.64%), #1C0CCF;
   position: relative;
-  min-height: 80vh;
+  height: 85vh;
+  min-height: 700px;
   max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,16 +457,118 @@ main section.section-3 {
   flex-direction: column;
   justify-content: center;
 }
+main section.section-3 h2 {
+  color: white;
+  padding-bottom: 100px;
+}
+main section.section-3 h4 {
+  color: white;
+}
+main section.section-3 .container-grid-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+main section.section-3 .grid {
+  display: grid;
+  grid-template-rows: 80px 80px auto;
+}
+main section.section-3 .breadcrum-box {
+  align-self: flex-end;
+  align-items: center;
+  display: flex;
+  padding-left: 40px;
+}
+main section.section-3 .breadcrum-box .breadcrum {
+  font-family: "Faktum";
+  color: #6FFDEA;
+  padding-left: 20px;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
 main section.section-4 {
   background-color: white;
   position: relative;
-  min-height: 80vh;
+  height: 90vh;
+  min-height: 700px;
   max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-position: center center;
   background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+}
+main section.section-4 h2 {
+  padding-bottom: 120px;
+  width: 75%;
+}
+main section.section-4 .p1 {
+  width: 80%;
+}
+main section.section-4 .breadcrum-box {
+  align-self: flex-end;
+  align-items: center;
+  display: flex;
+  padding-left: 40px;
+}
+main section.section-4 .breadcrum-box .breadcrum {
+  font-family: "Faktum";
+  color: #1C0CCF;
+  padding-left: 20px;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+main section.section-5 {
+  background-color: #1C0CCF;
+  background: url("/assets/media/cta_bg_still.png");
+  background-position: 0% 78%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 35vh;
+  min-height: 200px;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main section.section-5 h3 {
+  color: white;
+  letter-spacing: unset;
+  padding-bottom: 5px;
+}
+main section.section-5 .p1 {
+  width: 80%;
+}
+main section.section-5 .container-grid {
+  gap: unset;
+}
+main section.section-5 .button-group {
+  padding-top: 40px;
+}
+main section.section-5 .breadcrum-box {
+  align-self: flex-end;
+  align-items: center;
+  display: flex;
+  padding-left: 40px;
+}
+main section.section-5 .breadcrum-box .breadcrum {
+  font-family: "Faktum";
+  color: #1C0CCF;
+  padding-left: 20px;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+main footer {
+  background-color: black;
+  height: 35vh;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
