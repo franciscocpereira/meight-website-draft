@@ -1,0 +1,38 @@
+
+
+@font-face {
+    font-family: 'Faktum';
+    src: url('Faktum-Regular.eot');
+    src: local('Faktum Regular'), local('Faktum-Regular'),
+        url('Faktum-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Faktum-Regular.woff2') format('woff2'),
+        url('Faktum-Regular.woff') format('woff'),
+        url('Faktum-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Faktum';
+    src: url('Faktum-SemiBold.eot');
+    src: local('Faktum SemiBold'), local('Faktum-SemiBold'),
+        url('Faktum-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Faktum-SemiBold.woff2') format('woff2'),
+        url('Faktum-SemiBold.woff') format('woff'),
+        url('Faktum-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Faktum';
+    src: url('Faktum-Bold.eot');
+    src: local('Faktum Bold'), local('Faktum-Bold'),
+        url('Faktum-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Faktum-Bold.woff2') format('woff2'),
+        url('Faktum-Bold.woff') format('woff'),
+        url('Faktum-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

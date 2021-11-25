@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Meight PoC</title>
+
+        <!-- Sass -->
+        <link rel="stylesheet" href="styles/css/fonts.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="styles/css/styles.css" type="text/css" charset="utf-8">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/souldance_logo_icon_positive.svg"/>
+        <link rel="icon" type="image/png" href="https://code-server.kuji.pt/assets/media/souldance_logo_icon_positive.svg"/>
+
+        <!-- Google fonts - Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <!-- Termynal -->
+        <link rel="stylesheet" href="js/termynal.css">
+
+	</head>
+
+    <body>
+        <header>
+            <div class="container">
+            <a href="/index.html"><img id="logo-claim" src="assets/logos/WHITE_MEIGHT_CLAIM 1.svg" alt="logo-meight-claim" width="240" height="auto"></a>
+                <nav class="is-active">
+                    <a href="/about.html">About</a>
+                    <a href="/hiring.html">Hiring</a>
+                </nav>
+                <button class="hamburger" :class="{ 'is-active': sideNavIsActive }" @click="toggleSideNav">
+                    <div class="bar"></div>
+                </button>
+            </div>
+        </header>
+        <nav class="mobile-nav"">
+          <div class="top">
+                <a href="/about.html">About</a>
+                <a href="/hiring.html">Hiring</a>
+          </div>
+          <div class="bottom">
+            <a href="/login.html">login</a>
+            <a href="/register.html" class="button-negative">registo</a>
+          </div>
+        </nav>
+        <main>
+
+            <section class="hero">
+                <div class="container">
+                    <div class="container-grid">
+                        
+                        <h1 id="hero-headline">Road revolution starts here</h1>
+                        <p id="hero-subheadline" class="p1">Boost profitability, scale operations, retain drivers with the most advanced carrier software.</p>
+                        <div class="button-group">
+                            <a class="button">Talk to us</a>    
+                        </div>
+                        <img id="hero-image" src="/assets/media/tiny/phone.png" alt="">
+                    </div>
+                </div>
+                <video playsinline autoplay muted loop poster="/assets/media/header_preload.svg" id="bgvid" preload="auto">
+                    <!-- <source src="/assets/media/videoheader.webm" type="video/webm"> -->
+                    <source src="/assets/media/hero_video_bg_2.mp4" type="video/mp4">
+                </video>
+            </section>
+            <section class="section-1">
+                <div class="container">
+                    <div class="container-grid-columns">
+                        <div class="container-grid">
+                            <h2>Driver performance<br><span style="color: #1C0CCF;">equals</span> business<br> performance</h2>
+                            <p class="p1 bodytext-color2">Carriers use Meight Driver App<br> and software to offload driver training<br> and onboarding, manage driver workflow<br> and connect with the supply chain.</p>
+                        </div>
+                        <div class="container-grid">
+                            <img class="s1-img-1" src="/assets/media/s2_img_1.png" alt=""></div>
+                            <img class="s1-img-2" src="/assets/media/s2_img_2.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-2">
+                <div class="container">
+                    <div class="container-grid-columns">
+                        <div class="container-grid">   
+                            <div id="termynal" data-termynal data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+
+                                <span data-ty="input">python</span>
+                                <span data-ty="input" data-ty-prompt=">>>">import meight</span>
+                                <span data-ty="input" data-ty-prompt=">>>">meight.api_key = 'key_live_xxxxx'</span>
+                                <span data-ty="input" data-ty-prompt=">>>"></span>
+                                <span data-ty="input" data-ty-prompt=">>>">vehicle_id = 'veh_xxxxx'</span>
+                                <span data-ty="input" data-ty-prompt=">>>">meight.vehicles.get(vehicle_id)</span>
+                                <span data-ty>{<br>
+                                    registration_plate='AA-BB-CC',<br>
+                                    model={make='Iveco', name='Stralis 460'},<br>
+                                    ...<br>
+                                    }
+                                </span>
+                                <span data-ty="input" data-ty-prompt=">>>">route = meight.routes.create(name='Lisboa-Porto', google_maps_url='https://www.google.com/maps/dir/<br>
+                                    Lisboa/Porto/@39.9346983,-9.9874662')</span>
+                                <span data-ty="input" data-ty-prompt=">>>">task = meight.tasks.create(vehicle_id=vehicle_id, route_id=route.id, time_arrival='2025-01-01T10:00:00+01')</span>
+                                <span data-ty="input" data-ty-prompt=">>>">meight.tasks.preview(task.id)</span>
+                                <span data-ty>{<br>
+                                    travel_time=14354,<br>
+                                    distance=314188,<br>
+                                    weight=22000,<br>
+                                    vehicle_optimal_fuel_economy=32.4,<br>
+                                    ...<br>
+                                    }
+                                </span>
+                            </div>
+                            
+                            <img class="s1-img-2" src="/assets/media/s2_img.png" alt="">
+                        </div>
+                        <div class="container-grid">
+                            <h2 style="align-self: flex-end;">Carrier Infrastructure<br>on the Internet</h2>
+                            <p class="p1 bodytext-color2">Your TMS/ERP and Shippers can connect<br>with Meight software and APIs with ease<br> through our SDKs. Close the data loop<br> between HQ, Drivers and the supply chain.</p>    
+                        </div>
+                           
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="section-3">
+                <div class="container">
+                    <h2>Hello Meight</h2>
+                </div>
+            </section>
+            <section class="section-4">
+                <div class="container">
+                    <h2>Hello Meight</h2>
+                </div>
+            </section>
+        
+            
+        </main>
+
+        <script src="js/termynal.min.js" data-termynal-container="#termynal"></script>
+        <script src="js/termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+
+    </html>

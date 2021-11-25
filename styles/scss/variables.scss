@@ -1,0 +1,65 @@
+// VARIABLES
+
+// CORPORATE COLORS
+
+$corporate-blue: #1C0CCF; 
+$corporate-black: #1D1D1D;
+$corporate-cyan: #6FFDEA;
+$corporate-magenta: #FF00F3;
+
+// SECUNDARY COLORS
+
+$secundary-black: #4D0094;
+$secundary-red: #FB1700;
+$secundary-yellow: #FFEF3B;
+
+
+
+
+// MIXINS
+
+//Grid
+
+@mixin grid-general-purpose($grid-template-columns, $grid-template-rows, $gap, $padding) {
+    display:grid;
+    grid-template-columns: $grid-template-columns;
+    grid-template-rows: $grid-template-rows;
+    gap: $gap;
+    padding: $padding;
+}
+
+
+//Button @include button-general-purpose($purple, $purple, $purple, $purple);
+
+@mixin button-general-purpose ($button-background-color, $button-border, $hover-border-color, $hover-color){
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    background: $button-background-color;
+    border: 2px solid $button-border;
+    border-radius: 17px;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: 'Faktum';
+    letter-spacing: 0.02em;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+
+    &:hover {
+        background: $button-background-color;
+        border: 2px solid $hover-border-color;
+        color:rgb(250, 224, 244);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0);
+        transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -webkit-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out; 
+    }
+
+}
